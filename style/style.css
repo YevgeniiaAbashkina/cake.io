@@ -1,1 +1,7 @@
-
+@import 'screen.css';
+@import 'header.css';
+@import 'navigation.css';
+@import 'banner.css';
+@import 'about.css';
+@import 'services.css';
+/* @import 'article.css'; */

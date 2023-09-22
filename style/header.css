@@ -1,0 +1,53 @@
+.header {
+    position: relative;
+}
+
+.header__logo,
+.navigation {
+    position: fixed;
+    left: 50%;
+    
+    z-index: 20;
+    transform: translate( -50%, -50% );
+}
+
+.header__logo {
+    top: 20%;
+}
+
+.navigation {
+    top: 50%;
+    width: 100%;
+}
+
+.logo {
+    width: 10em;
+    height: auto;
+}
+
+.header__social {
+    position: fixed;
+    top: 5rem;
+    right: 0;
+
+    z-index: 51;
+}
+@media ( min-width: 80rem ) {
+    .header__social {
+        right: .75em;
+    }    
+
+    
+    .moove .header__logo {
+        padding: 0;
+    }
+}
+
+
+.social {
+    width: 2em;
+    height: 2em;
+    margin: 3em 0;
+}
+
+

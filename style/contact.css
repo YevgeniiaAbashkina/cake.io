@@ -1,0 +1,44 @@
+.contact {
+    background-color: #d6c8d8;
+}
+
+.contact__item {
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.contact__col img {
+    transition: all .5s ease;
+}
+
+.contact__item img {
+    width: 5rem;
+    margin: 1.5rem auto;
+}
+
+.contact__col img:hover {
+    transform: scale( 105% );
+    box-shadow: 2px 3px 6px #00000079;
+}
+
+a.contact__links {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #2f2e41;
+}
+
+@media ( min-width: 45rem ) {
+    .contact__content {
+        display: flex;
+        margin: 2rem auto;
+    }
+
+    .contact__col {
+        _display: flex;
+        width: 50%;
+    }
+
+    .contact__col:first-child {
+        margin-right: 5rem;
+    }
+}

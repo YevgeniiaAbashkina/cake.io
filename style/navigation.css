@@ -74,7 +74,7 @@ nav ul li a {
     top: 0;
     left: 50%;
 
-    padding: .75em;
+    padding: .75em 1.5em .75em 1.1em;
     width: 100%;
     max-width: 120rem;
 
@@ -104,8 +104,10 @@ nav ul li a {
     position: absolute;
     top: 6.5rem;
     right: 0;
-    width: 50%;
     z-index: 20;
+
+    height: 100vh;
+    width: 100%;
 
     background-color: #2f2e419d;
     transition: all .5s ease;
@@ -117,12 +119,57 @@ nav ul li a {
 }
 
 .moove .navigation-list {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc( 100vh - 6.5rem );
 }
 
 .moove .navigation-item {
     width: 100%;
+    margin: 2rem 0;
 }
+
+@media ( min-width: 45rem ) {
+    .moove .navigation__moove {
+        width: 50%;
+    }
+
+    .moove .navigation-list {
+        width: 100%;
+    }
+
+    .moove .navigation-item__icon {
+        display: block;
+        width: 20%;
+
+        margin-right: 2rem;
+
+        
+    }
+
+    .moove .navigation-item {
+        display: flex;
+        align-items: center;
+
+        margin: 2rem;
+    }
+
+    .moove .navigation-item__icon::after {
+        border: 2px solid white;
+    }
+}
+
+@media ( min-width: 60rem ) {
+    .moove .navigation-item__icon {
+        display: block;
+        width: 15%;
+
+        margin-right: 2rem;
+    }
+}
+
+
 
 .burger-menu span {
     display: block;
@@ -130,7 +177,7 @@ nav ul li a {
 
     background: white;
     height: 3px;
-    width: 32px;
+    width: 1.5em;
     transition:all ease 0.1s;
 }
 

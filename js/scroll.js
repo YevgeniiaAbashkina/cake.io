@@ -2,6 +2,18 @@
 * Edit navigation to scroll event
 */
 
+var burger    = document.querySelector( '.trigger' );
+var navi      = document.querySelector( '.navigation' );
+var naviMoove = document.querySelector( '.navigation__moove' );
+
+var header   = document.querySelector( '.header' );
+var about    = document.querySelector( '.about' );
+
+getCoordsForMenuHidden();  
+
+window.addEventListener( 'scroll', function() {
+    getCoordsForMenuHidden();
+} );
 
 function getCoords( elem ) {
     var box = elem.getBoundingClientRect();
@@ -12,16 +24,7 @@ function getCoords( elem ) {
     };
 };
 
-window.addEventListener( 'scroll', function() {
-
-    var burger    = document.querySelector( '.trigger' );
-    var navi      = document.querySelector( '.navigation' );
-    var naviMoove = document.querySelector( '.navigation__moove' );
-
-    var header   = document.querySelector( '.header' );
-    var about    = document.querySelector( '.about' );
-
-
+function getCoordsForMenuHidden() {
     if( ( getCoords( navi ).bottom - 40 ) < getCoords( about ).top ) {
         navi.style.opacity = '1';
 
@@ -39,4 +42,4 @@ window.addEventListener( 'scroll', function() {
         naviMoove.style.display = 'inline-block';
         navi.style.pointerEvents = 'none';
     };
-} );
+};
